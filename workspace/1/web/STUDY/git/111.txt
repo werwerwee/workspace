@@ -1,0 +1,99 @@
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice
+$ git init
+Initialized empty Git repository in C:/Users/admin/Desktop/workspace/1/web/STUDY/git/git-practice/.git/
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git add .
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git commit -m "Add README file"
+[main (root-commit) 0402c3c] Add README file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git log --oneline
+0402c3c (HEAD -> main) Add README file
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git add .
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   app.js
+
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git commit -m "Add app.js that prints Hello World"
+[main 6df3769] Add app.js that prints Hello World
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.js
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git log --oneline
+6df3769 (HEAD -> main) Add app.js that prints Hello World
+0402c3c Add README file
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git add .
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git commit -m "Update README file"
+[main 11d2d6d] Update README file
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git status
+On branch main
+nothing to commit, working tree clean
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ git log
+commit 11d2d6d16b73b2dde478dd9349091e58c8f8ee3b (HEAD -> main)
+Author: unknown <kdhzmxn@gmail.com>
+Date:   Wed Apr 17 14:37:06 2024 +0900
+
+    Update README file
+
+commit 6df37693c79d37848c54d28b07d8557ebd9da26d
+Author: unknown <kdhzmxn@gmail.com>
+Date:   Wed Apr 17 14:33:22 2024 +0900
+
+    Add app.js that prints Hello World
+
+commit 0402c3c0489f448e556eb52a9a3da42ed018325d
+Author: unknown <kdhzmxn@gmail.com>
+Date:   Wed Apr 17 14:29:12 2024 +0900
+
+    Add README file
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$ ^C
+
+admin@DESKTOP-JJHHJ8M MINGW64 ~/Desktop/workspace/1/web/STUDY/git/git-practice (main)
+$
+

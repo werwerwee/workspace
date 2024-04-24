@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅁㅁㅁ</title>
+    <script src="3.js"></script>
+</head>
+<body>
+    <table border="1">
+        <tr><th colspan="2">회원정보 수정</th></tr>
+        <tr>
+            <td>아이디</td>
+            <td><input type="text" value="kdhzmxn" disabled ></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><form><input id="ps" type="password"></form></td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인</td>
+            <td><form><input id="psch" type="password"></form></td>
+        </tr>
+        <tr>
+            <td rowspan="3"> 주소</td>
+            <td><input type="text" placeholder="우편번호"></td>
+        </tr>
+        <tr><td><input type="text" placeholder="주소"></td></tr>
+        <tr><td><input type="text" placeholder="상세주소"></td></tr>
+        <tr>
+            <td>생년월일</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text"></td>
+        </tr>
+        <tr>
+            <td>전화번호</td>
+            <td><input type="text" size="2" value="010" disabled>
+                <input type="text" size="3" value="9161" disabled>
+                <input type="text" size="3" value="4526" disabled></td>
+        </tr>
+        <tfoot>
+            <td colspan="2"><input type="button" value="수정완료" onclick="check('a');">
+                <input type="button" value="회원가입"  onclick="check('b');"></td>
+        </tfoot>
+    </table>
+</body>
+</html>

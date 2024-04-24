@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding: 0;}
+
+        ul,ol{list-style: none;}
+
+        .wrap{width: 960px; border: 1px solid black; margin: auto;}
+
+        header{width: 100%; height: 50px; background-color: pink; padding: 25px 0;}
+
+         header > nav > ul > li > .inner_menu{
+            position:absolute;
+            width:192px;
+            background-color:rgba(255,255,255,0.8);
+            /* display:none; */
+            height:0;
+            overflow:hidden;
+            transition:all 0.3s linear;
+        }
+        header > nav > ul > li:hover .inner_menu{
+            /* display:block; */
+            height:150px;
+        }
+
+
+        /* header navigation */
+        header > nav > ul > li {float: left; width: 192px; height:50px; background-color: skyblue; border: 1px solid white; box-sizing:border-box; text-align: center; line-height: 50px;
+            /* content-box 컨텐츠 영역을 기준으로 크기를 결정
+               border-box 외곽선을 기준으로 크기를 결정 */
+            }
+
+        aside{width: 15%; min-height: 400px; background-color: skyblue; float: left;}
+
+        aside.right{float: right;}
+
+        section{width:70%; background-color: bisque; min-height: 400px; float: left;}
+
+        footer{clear: right; width: 100%; height: 100px; background-color: hotpink;}
+        
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <!-- nav>ul>(li>a+ul.inner_menu>(li>a{menu-$})*3)*5 -->
+            <nav>
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                        <ul class="inner_menu">
+                            <li><a href="">menu-1</a></li>
+                            <li><a href="">menu-2</a></li>
+                            <li><a href="">menu-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">About us</a>
+                        <ul class="inner_menu">
+                            <li><a href="">menu-1</a></li>
+                            <li><a href="">menu-2</a></li>
+                            <li><a href="">menu-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">contact</a>
+                        <ul class="inner_menu">
+                            <li><a href="">menu-1</a></li>
+                            <li><a href="">menu-2</a></li>
+                            <li><a href="">menu-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Travel</a>
+                        <ul class="inner_menu">
+                            <li><a href="">menu-1</a></li>
+                            <li><a href="">menu-2</a></li>
+                            <li><a href="">menu-3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">Food</a>
+                        <ul class="inner_menu">
+                            <li><a href="">menu-1</a></li>
+                            <li><a href="">menu-2</a></li>
+                            <li><a href="">menu-3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            
+        </header>
+        <aside>left</aside>
+        <section><h2>불금을 위하여...</h2>
+            <article>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quo ut corporis architecto iusto ad aliquam officia earum eos praesentium enim! Sint rem voluptatibus adipisci assumenda alias magnam consectetur odio nostrum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat magni molestiae consectetur, amet eveniet, ipsa excepturi vitae, quaerat corrupti nobis eius! Magnam, consequatur. Amet ut est repellendus expedita ratione illo.</p>
+            </article>
+        </section>
+        <aside class="right">right</aside>       
+        <footer></footer>
+    </div>
+</body>
+</html>

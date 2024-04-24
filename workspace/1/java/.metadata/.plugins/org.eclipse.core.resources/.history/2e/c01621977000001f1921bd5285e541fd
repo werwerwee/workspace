@@ -1,0 +1,9 @@
+package J_01_frist_java;
+
+public class Hello {	
+	
+	public static void main(String[]args) {
+		ewrrewqewrqewr
+		System.out.println("Hello World");
+	}
+}

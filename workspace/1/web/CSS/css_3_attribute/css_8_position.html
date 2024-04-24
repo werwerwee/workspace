@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+        /* position 속성
+           요소가 배치되는 방식을 결정 - 기본값은 static
+           static     relative    absolute    fixed */
+
+           .box1{position:static; width: 500px; height: 500px; background-color: gray; margin-bottom: 50px;}
+
+           .absolute_parent{position: relative; width: 500px; height: 500px; background-color: blue; margin-top: 100px;}
+
+           .absolute_child1{position: absolute; top: 100px; left: 100px; width: 100px; height: 100px; background-color: yellow;}
+
+           .absolute_child2{position: absolute; top: 150px; left: 150px; width: 100px; height: 100px; background-color: green;}
+
+           .fixed{position: fixed; top: 200px; right: 200px; width: 100px; height: 100px; background-color: red;}
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="absolute_parent">
+            <div class="absolute_child1"></div>
+            <div class="absolute_child2"></div>
+    </div>
+    <div class="fixed"></div>
+</body>
+</html>

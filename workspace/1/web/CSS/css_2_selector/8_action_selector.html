@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+       h1{ color:red;}
+        /* h1 태그요소에 마우스가 over되었을때 */
+        h1:hover{color:blue;
+            /* 마우스 포인터 모양 */
+            cursor:text;  /* 문자열을 지정한것처럼 문자 선택자 모양*/
+            /* 반응이 가능한 것을 의미하는 것 처럼 손가락 모양 생성*/
+            cursor:pointer;
+             /* 돋보기 모양  */
+            cursor:zoom-in;
+            cursor:zoom-out;
+            /* + + 모양 */
+            cursor:copy;}
+            h1:active{
+            color:orange;}
+        /* input 태그 요소 중 disabled 상태인 요소 */
+        input:disabled{
+            background-color: lightgray;}
+        /* 
+            input 태그 요소 중 활성화 상태인 요소
+            disabled가 아닌 요소
+         */
+        input:enabled{
+            color:white;
+            background-color: pink;}
+
+        input:read-only{
+            color:skyblue;
+            background-color: hotpink;}
+
+        input:focus{
+            background-color:white;
+            color:gray;
+            outline-color:aqua;
+            /* solid 실선, dotted 점선 dashed 굵은 점선 */
+            outline-style: dotted ;
+            /* 선 굵기 */
+            outline-width: 1mm;
+            /* 아웃라인 사용안함 */
+            outline: none;
+            border:none;}
+
+        .accept:checked{
+            width:100px;
+            height:100px;}
+
+    </style>
+</head>
+<body>
+    <h1>반응-상태선택자</h1>
+    
+    <h2>사용가능-enabled</h2>
+    <input type="text" placeholder="아이디 작성 공간">
+
+    <h2>사용불가능-disabled</h2>
+    <input type="text" value="aaa" disabled>
+
+    <h2>읽기전용-readonly</h2>
+    <input type="text" value="bbb" readonly>
+
+    <hr>
+    <input type="text" value="bbb" readonly>
+    <label for="">
+       <input type="checkbox" class="accept" checked>checkbox
+    </label>
+
+</body>
+</html>

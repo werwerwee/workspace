@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>산술 연산자</title>
+    <script>
+        // 연산자 : 좌변과 우변의 연산된 결과를 제공
+        // 산술연산자(Numeric Operator)
+        // + , - , * , / , % , **
+        
+        let two = 2;
+        let three = 3;
+        //대입연산자 우변의 연산이 끝난 결과를 좌변에다가 대입하는 연산
+        let result = two + three; //add
+        console.log(result);
+
+        result = two - three;  //subtrate
+        console.log(result);
+
+        result = two * three  //multiply
+        console.log(result);
+
+        result = two / three;  //divide
+        console.log(result);
+
+        result = two % three;  //rest
+        console.log(result);
+
+        result = two ** three;  //Exponentiation
+        console.log(result);
+
+        result = two / 0;
+        console.log(result)
+
+        let str = "JavaScript";
+        result = two - str;
+        //산술연산을 할 수 없는 데이터 타입이 포함되어 있음.
+        //Not a Number , NaN
+        console.log(result);
+
+        //접합연산
+        str = "번째 학생입니다";
+        result = two + str;
+        console.log(result);
+        console.log(typeof(result))
+
+        let prefix = "HELLO"; //접두사
+        let suffix = "JavaScropt"; // 접미사
+        let strResult = prefix + suffix;
+        console.log(strResult)
+
+        strResult = strResult + result
+        console.log(strResult)
+
+        strResult =" 결과입니다. ";
+        strResult = two + three + strResult;
+        console.log(strResult);
+
+        /*
+            대입연산은 우항에서 좌항으로..
+            산술연산은 좌항에서 우항으로 연산이 이루어짐
+        */
+
+        strResult = "결과";
+        strResult = strResult + two * three;
+        console.log(strResult);
+
+        kkk = 3 * 2 ** 3
+        console.log(kkk)
+
+        // 산술연산의 우선순위
+        // 기본적으로 좌항에서 우항으로 연산이 이루어지되, 우선순위가 높은 연산자가 먼저 진행
+
+        result = "결과값은 : " + (two + three);
+        console.log(result)
+        
+        let sum = two +three;
+        result = "결과값은 : " + sum + "입니다"
+        console.log(result)
+
+        result = two +"+"+three+" 의 결과값은 : " + sum + "입니다. ";
+        console.log(result)
+        
+        // 백틱(back tick) 키보드 자판 1번 좌측키
+        //백틱으로 감싸서 javascript에 선언된 변수와 조화롭게 문자열을 생성할 때 사용되는 template 문자열
+
+        result=`${two}+${three}의 결과값은 : ${sum}입니다`;
+        console.log(result)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.background{position: relative; width: 1000px; height: 500px; border: 1px solid black; }
+
+        /* div.center{position: absolute; top: 50%; left: 50%; width: 10px; height: 10px; background-color: black;} */
+
+
+        div.ward {transform: translate(-50%, -50%);  text-transform: uppercase; position: absolute; border: 1px solid black; border-radius: 3px; animation: ward 2s alternate-reverse infinite ; animation-delay:0.3s;} 
+
+        @keyframes ward{
+            to{transform: rotateY(-360deg);}
+
+            from{transform: rotateY(360deg) ;}
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="center"></div>
+        
+            <div class="ward"> korate </div>
+        
+    </div>
+</body>
+</html>

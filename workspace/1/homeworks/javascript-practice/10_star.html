@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별</title>
+
+    <style>
+        div{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <script>
+            let size = prompt('높이를 입력하세요.');
+            let max = size *2 -1;
+        for(let i = 1; i<= max; i++){
+            if (i<=size){
+                for(let j = 1; j<=i; j++){
+                    document.write("*")
+                }
+            }else{
+                for(let j =0; j<=(max-i); j++){
+                    document.write("*")
+                }
+            }
+            document.write("<br/>");
+        }
+        </script>
+    </div>
+
+</body>
+
+</html>

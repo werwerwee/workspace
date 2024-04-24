@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 2. switch 문
+        /*
+        switch문의 형식
+
+        switch(비교할 값이 저장된 변수){
+            case 값 1 :
+                switch에 지정된 변수의 값과 case의 값 1 이 일치할 경우 실행
+                break; //작업수행을 완료 후 switch 종료
+            case 값 2 :
+                switch에 지정된 변수의 값과 case의 값 2 이 일치할 경우 실행
+                break; //작업수행을 완료 후 switch 종료
+            default :
+                case 에서 일치하는 값을 찾지 못했을 경우 실행
+        }        
+        */
+
+        let grade = prompt("성적을 입력해 주세요" , "A ~F 사이 한개의 문자");
+
+            let messge = null;
+
+            switch(grade){
+                case 'A' :
+                    messge ="참 잘했어요!";
+                    break;
+                case 'B':
+                    messge ="좋은 점수군요";
+                    break;
+                case 'C' :
+                    messge ="노력해야겠어요";
+                    break;
+                case 'D' :
+                    messge ="많이 노력하세요";
+                    break;
+                case 'F' :
+                    messge ="나가!";
+                    break;
+                //case에서 지정된 값과 일치하는 값을 찾지 못했을때
+                default : messge = "알 수 없는 학점입니다"
+            }
+            
+            document.write("<h1>"+messge+"</h1>");
+
+            if (grade == 'A') {
+                message="A학점이군요";                
+            } else if(grade == 'B'){
+                message="좀 하네?"; 
+            }else if(grade == 'C'){
+                message="노력하세요"; 
+            }else if(grade == 'D'){
+                message="많이 노력하세요"; 
+            }else if(grade == 'F') {
+                message="나가"; 
+            }else{
+                message = "일치하는 학점을 찾지 못하였습니다.";
+            }
+            console.log(message);
+
+
+        let year = 2024;
+        let days;
+        let month = prompt("일수를 확인할 월을 입력해 주세요 1~12 사이 입력");
+        switch(month){
+            case '1' : case '3' : case '5' : case '7' : case '8' : case '10' : case '12' : 
+                days = 31;
+                break;
+            case '4' : case '6' : case '9' : case '11' : 
+                days = 30;
+                break;
+            case '2' :
+                //year(2024) (year % 4 == 0)
+                // (year % 100 !=0)
+                // (year % 4 == 0) && (year % 100 !=0)
+                // (year % 4 == 0) && (year % 100 !=0) || (year % 400 == 0)
+
+                if(((year % 4 == 0) && (year % 100 !=0)) || (year % 400 == 0)){
+                    days = 29;
+                }else{ 
+                    days= 28;
+                }
+                break;
+                default : 
+                days = 0;                
+        }
+        document.write(`선택하신 ${month}월은 ${days}입니다.`); //template문자열
+    </script>
+</body>
+</html>

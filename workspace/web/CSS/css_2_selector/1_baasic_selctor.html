@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 문서 안에 있는 모든 태그 요소 */
+        *{color: greenyellow;}
+        h1{color: red;}
+        /* id속성 - # 아이디 값
+           class속성 - class 속성값 */
+        #bg{background-color: skyblue;}
+        #color{color: blue;}
+        .size{font-size: 50px;}
+        .color{color: pink;}
+        h2{color: hotpink;}
+        /* 동일 선택자라고 하면 아래쪽에 정의된 디자인 속성이 적용. 선택자가  상이하다고 하면, inline > id > class > 태그 (타입) */
+    </style>
+</head>
+<body>
+    <h1>type (태그) 선택자</h1>
+    <!-- h2{선택자 적용}*4 -->
+    <h2 id="bg">선택자 적용</h2>
+    <h2 id="color">선택자 적용</h2>
+    <h2 class="color">선택자 적용</h2>
+    <h2 style="color: black;" id="color" class="size color">선택자 적용</h2>
+    <h3>선택자 적용</h3>
+    
+</body>
+</html>

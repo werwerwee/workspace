@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+    }
+
+    .wrap{
+        width: 600px;
+        margin: 0 auto;
+        display: flex;
+        background-color: gray;
+        flex-wrap:nowrap;
+    }
+
+    .item{
+        /* 기준 크기 */
+        flex-basis: 200px;
+        height: 100px;
+    }
+
+    /* wrap == 600px
+        200px * 4 == 800px
+        flex box 크기를 벗어나는 크기가 200px
+        200/4=50px */
+
+    .item01{
+        background-color: blue;
+        flex-shrink: 1;
+    }
+    .item02{
+        background-color: green;
+        flex-shrink: 1;
+    }
+    .item03{
+        background-color: red;
+        flex-shrink: 2;
+    }
+    .item04{
+        background-color: yellow;
+        flex-shrink: 0;
+    }
+</style>
+<body>
+    <div class="wrap">
+        <siv class="item item01">01</siv>
+        <siv class="item item02">02</siv>
+        <siv class="item item03">03</siv>
+        <siv class="item item04">04</siv>
+    </div>
+</body>
+</html>

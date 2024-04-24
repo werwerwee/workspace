@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>321</title>
+</head>
+<body>
+    <form>
+        <input id='a1' type="number"/>
+        <input id="a2" type="number">
+        <br>
+        <button onclick="aaa()" type="button" >더하기</button>
+        <button onclick="bbb()" type="button" >곱하기</button>
+        <button onclick="ccc()" type="button" >나누기</button>
+        <button onclick="ddd()" type="button" >빼기</button>
+    </form>
+    <div id='result'>result</div>
+    <div id="a1"></div>
+    <div id="a2"></div>
+    
+
+    <script>
+        function aaa(){
+            let a1 = document.getElementById('a1').value;
+            let a2 = document.getElementById('a2').value;
+
+
+            a1 = parseInt(a1);
+            a2 = parseInt(a2);
+
+            let p = a1 + a2;
+
+            document.getElementById("a1").innerText = a1;
+            document.getElementById("a2").innerText = a2;
+
+            document.getElementById("result").innerText = p;
+        }
+
+        function bbb(){
+            let a1 = document.getElementById('a1').value;
+            let a2 = document.getElementById('a2').value;
+
+
+            a1 = parseInt(a1);
+            a2 = parseInt(a2);
+
+            let p = a1 * a2;
+
+            document.getElementById("a1").innerText = a1;
+            document.getElementById("a2").innerText = a2;
+
+            document.getElementById("result").innerText = p;
+        }
+
+        function ccc(){
+            let a1 = document.getElementById('a1').value;
+            let a2 = document.getElementById('a2').value;
+
+
+            a1 = parseInt(a1);
+            a2 = parseInt(a2);
+
+            let p = a1 / a2;
+
+            document.getElementById("a1").innerText = a1;
+            document.getElementById("a2").innerText = a2;
+
+            document.getElementById("result").innerText = p;
+        }
+
+        function ddd(){
+            let a1 = document.getElementById('a1').value;
+            let a2 = document.getElementById('a2').value;
+
+
+            a1 = parseInt(a1);
+            a2 = parseInt(a2);
+
+            let p = a1 - a2;
+
+            document.getElementById("a1").innerText = a1;
+            document.getElementById("a2").innerText = a2;
+
+            document.getElementById("result").innerText = p;
+        }
+    </script>
+</body>
+</html>

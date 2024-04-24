@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html{font-size: 24px;}
+        .font{ font-size: 40px; font-weight:700;
+            /* font-style 이탤릭체등의 글꼴스타일 지정
+               font-weight 글자 두께
+               font-variant 소문자를 대문자로 small-caps
+               font-size 글자 크기
+               font-fmaily 글꼴지정
+               font-height 줄 간격
+               latter-spacing 글자간의 간격
+               word-spacing 단어간의 간격*/
+
+        /* keyword  : lighter          normal             bold        bolder
+            number  : 100,  200,  300,  400,  500,  600,  700,  800,   900
+            normal  : 보통 = 400
+            bold    : 굵은 글자 = 700
+            lighter : 물려받은 글자 크기보다 얅게
+            bolder  : 물려받은 글자 크기보다 굵게
+            initial : 물려받은 값에 상관없이 기본값 적용 */
+
+        /* 글꼴 */
+        font-family:"Nanum Gothic Coding", monospace; font-variant: small-caps; 
+        /* 기본값 normal
+                 italic
+                 oblique */
+        font-style: italic;
+        font-style: oblique;}
+        /* italic과 oblique의 차이점
+            - italic는 italic로 디자인 된 폰트를 사용
+              oblique는 단순히 normal폰트 글자를 기울이기만 함 */
+
+        
+        .third{font-weight: lighter; /* font-size: 150%; */ font-size: 1.5rem;}
+        
+        .size{font-size:16px;}
+        
+        .box{width: 500px; height: 500px; border: 1px solid black;
+        /* inline 요소의 수평정렬
+           left, right, center, start, end, center*/
+           text-align: center;
+           
+           /* 한 라인이 차지하는 높이 */
+           line-height: 250px;
+
+           /* shadow효과 */
+           /* box안에 그림자 효과 부여 */
+           /*          우  하  흐림정도 그림자 색*/
+           box-shadow: 5px 5px 10px gray;
+           /* text에 그림자 효과 부여 */
+           text-shadow: -5px -5px 5px blue;
+        }
+           .content{font-size:1.7em; 
+            /* 자간 글자사이의 간격 */
+            letter-spacing:2px;
+            /* 단어사이의 간격 */
+            word-spacing: 5px;}
+    </style>
+</head>
+<body>
+    <div class="font">
+        HELLO HTML
+        <div class="child">
+             hello html
+            <div class="third">
+                hello html
+            </div>
+        </div>
+    </div>
+
+    <span>test</span>
+    <span class="size">test 16px</span> <br><br><hr>
+
+    <div class="box">
+        <span class="content">content space</span><br>
+        <span class="content">content space</span>
+    </div>
+</body>
+</html>

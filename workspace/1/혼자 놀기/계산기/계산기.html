@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+<body>
+    <h1>김동하 계산기</h1>
+    <form>
+        <input id='a1' type="number">
+        <br>
+        <input id="a2" type="number">
+        <br>
+        <button onclick="aaa('a');" type="button">더하기</button>
+        <button onclick="aaa('b');" type="button">곱하기</button>
+        <button onclick="aaa('c');" type="button">나누기</button>
+        <button onclick="aaa('d');" type="button">빼기</button>
+    </form>
+    <div id='결과'>결과</div>    
+
+    <script>
+        function aaa(result){
+            let aa;               
+            a1 = document.getElementById('a1').value;
+            a2 = document.getElementById('a2').value;
+            a1 = parseInt(a1);
+            a2 = parseInt(a2);
+            switch(result){
+                case 'a' :
+                    aa = a1+a2;
+                    break;
+                case 'b' :
+                    aa = a1*a2;
+                    break;
+                case 'c' :
+                    aa = a1/a2;
+                    break;
+                case 'd' :
+                    aa = a1-a2;
+                    break;
+            }
+            document.getElementById("결과").innerText=aa;
+        }
+    </script>
+</body>
+</html>

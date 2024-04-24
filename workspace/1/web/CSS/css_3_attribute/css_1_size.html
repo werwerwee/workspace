@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{border:1px solid black}
+        .place{display: inline; background-color:  yellow; width: 500px; height: 500px;}
+        
+
+        span{display:block; width: 300px; height: 300px;}
+
+        .inline_box a
+            /*  a 태그는 inline 요소 
+                inline 요소는 크기 변경 불가  */
+
+            {width: 100px; height: 30px;
+            /* 안쪽 여백 */
+            padding: 15px;
+             /*싱히 좌우 여백  */
+            padding: 10px 15px;
+            /* 상 우 하 좌 여백 */
+            padding: 10px 15px 10px 15px;}
+
+            .inline_block a{display: inline-block; width: 200px; height: 40px;}
+
+            .inline_box{visibility:hidden;}
+    </style>
+</head>
+<body>
+    <!-- div.place>span{place} -->
+    <div class="place">
+        <span>PLACE SPAN TAG</span>
+    </div>    
+    <div class="place">
+        <span>PLACE</span>
+    </div>
+
+    <div class="inline_box"> <br>
+        <a href="#">INLINE - 요소</a>
+        <a href="#">INLINE - 요소</a>
+        <a href="#">INLINE - 요소</a>
+        <br><br>
+    </div>
+    <br><br><br><br><hr>
+
+    <div class="inline_block">
+        <a href="#">inline-block 요소</a>
+        <a href="#">inline-block 요소</a>
+        <a href="#">inline-block 요소</a>
+    </div>
+</body>
+</html>

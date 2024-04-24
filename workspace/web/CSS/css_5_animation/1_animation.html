@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anim1, .anim2{
+            width: 100px; height: 100px; background-color: skyblue;
+        }
+
+        /* css animation 지정된 css속성을 frame에 따라 변경되는 디자인을 부드럽게 시간에 따라 보여주는 속성 */
+
+        .anim1{animation-name: changeOpacity; animation-duration: 3s; animation-iteration-count:3;animation-iteration-count:infinite; animation-timing-function: linear;
+            /* normal 지정한 프레임 순서대로 진행
+                      from -> to 종료
+                      from -> to 종료
+               reverse 반대방향으로 진행
+                      to -> from 종료
+                      to -> from 종료
+               alternate 정해진 순서로 진행했다가 다시 반대로 진행
+                      from -> to -> from 종료
+                      from -> to -> from 종료
+               alternate-reverse 반대로 시작했다가 원래대로 진행
+                      to -> from -> to 종료
+                      to -> from -> to 종료
+
+                */
+            animation-direction:reverse ; 
+            animation-direction:alternate ;}
+
+            .anim2{animation:chanceStyle 3s infinite linear alternate;}
+
+            
+
+            /* 지정된 이름을 key(구분) 로 구분해서 변경될 디자인의 구조를 정의 */
+            @keyframes changeOpacity{
+            /* 시작 */
+            from{opacity: 1.0;}
+            /* 끝 */
+            to{opacity: 0;}}
+
+            @keyframes chanceStyle {
+                0%{width: 100px;}
+
+                50%{width: 300px; background-color: pink ; transform: rotate(360deg)}
+
+                100%{width:200px; background-color: purple;}
+            }
+    </style>
+</head>
+<body>
+    <div class="anim1"></div>
+    <br>
+    <div class="anim2"></div>
+</body>
+</html>

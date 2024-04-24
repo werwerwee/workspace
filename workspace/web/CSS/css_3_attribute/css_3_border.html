@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width:200px; height:200px; border: 1px solid black; background-color: bisque;
+        /*  width - 두께 px 수치를 이용하여 지정
+
+            keyword
+            thick - 굵게
+            menidem - 중간
+            thin - 얇게
+            
+            선 style - 선 모양
+            solid - 실선
+            dotted - 점선
+            dashed - 약간 긴 점선
+            double - 이중 실선 */
+
+            /* 상 우 하 좌 */
+            /* top right bottom left */
+            border-right-style:double;
+            border-right-width:thick;
+            border-right-color:aqua;
+            border-bottom:thin dotted red;}
+
+            .inner_box{ border: 2px dashed black; width: 75px; height: 70px; background-color: yellow; border-radius:35px;
+            border-top-right-radius:20px; border-bottom-left-radius:20px;}
+            
+    </style>
+</head>
+<body>
+    <!-- div.box>div.inner_box{CONTENT} -->
+    <div class="box">
+        <div class="inner_box">CONTENT</div>
+    </div>
+</body>
+</html>

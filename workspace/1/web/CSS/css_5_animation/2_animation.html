@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{margin: 0; padding:0;}
+        /* div{ border: 1px solid black; } */
+
+        header.intro{width: 100%; height: 1600px; background-image: url(../../img/intro/intro_bg.png);}
+
+        .intro .introWrap{width: 760px; height: 516px; position: relative; top: 100px; left: 50%; margin-left: -380px;}
+
+         .intro .introWrap .logo{
+            position: absolute;
+            z-index: 100;
+            width:760px;
+            height:516px;
+            background-image: url(../../img/intro/logo.png);
+        }
+        /* 161 161 */
+        .intro .introWrap .lion{position: absolute; width: 161px; height: 161px; top: 90px; left: 30px; background-image: url(../../img/intro/lion.png); animation: spinlion 1000ms linear infinite alternate;}
+
+        @keyframes spinlion{
+            from{transform:rotate(-10deg) ;}
+
+            to{transform:rotate(10deg);}
+        }
+        /* 105 129 */
+        .intro .introWrap .rabbit{position: absolute; width: 105px; height: 129px; top: 90px; right: 70px; background-image: url(../../img/intro/rabbit.png); animation: spinrabbit 1s linear infinite alternate;}
+
+        @keyframes spinrabbit{
+            from{transform: rotate(10deg);}
+
+            to{transform:rotate(0);}
+        }
+        /* 85 93 */
+        .intro .introWrap .monkey{position: absolute; width: 85px; height: 93px; bottom: 120px; left: 50px; background-image: url(../../img/intro/monkey.png); z-index: 101;}
+
+
+        /* 112 105 */
+        .intro .introWrap .bear{position: absolute; width: 112px; height: 105px; bottom: 100px; right: 100px; background-image: url(../../img/intro/bear.png); z-index: 101;}
+
+
+        .intro .cloudWrap{position: relative; width: 100%; height: 1050px;}
+
+        .intro .cloudWrap .leftcloud{position: absolute; width: 934px; height: 816px; background-image: url(../../img/intro/cloud1.png); left: 0;}
+
+        .intro .cloudWrap .rightcloud{position: absolute; width: 843px; height: 858px; background-image: url(../../img/intro/cloud2.png); right: 0;}
+
+        .intro .cloudWrap .dragonfly{top: 800px; position: absolute; width: 336px; height: 228px; background-image: url(../../img/intro/dragonfly.png); background-size:contain; background-repeat:no-repeat; animation: fly 5s ease-in-out infinite normal;}
+
+        @keyframes fly{
+
+            0%{left: -336px;}
+
+            25%{transform: translateY(-70px); width:250px;}
+
+            50%{width: 336px;}
+
+            75%{transform: translateY(50px) ; width: 380px;}
+
+            100%{left: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <header class="intro">
+        <div class="introWrap">
+            <div class="logo"></div>
+            <div class="lion"></div>
+            <div class="rabbit"></div>
+            <div class="monkey"></div>
+            <div class="bear"></div>
+        </div>
+
+        <div class="cloudWrap">
+            <div class="leftcloud"></div>
+            <div class="rightcloud"></div>
+            <div class="dragonfly"></div>
+        </div>
+    </header>
+    
+</body>
+</html>

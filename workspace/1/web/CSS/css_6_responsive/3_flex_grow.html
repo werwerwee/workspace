@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex grow</title>
+    <style>*{
+            margin: 0; padding: 0;
+            height: 100%;
+        }
+
+        .wrap{
+            display: flex;
+            width: 600px;
+            margin: 0 auto;
+            background-color: gray;
+        }
+
+        /* flex-grow에 부여된 속성의 값의 합을 기준으로 남은 여백을 나눔.
+            각 item요소의 크기가 100px이고 전체 wrap의 크기가 600px
+            600-(100*4)=200
+            200px의 여백이 남아있고 내부요소의 크기를 확장하여 부모 flex크기만큼 채우는 속성
+            
+            200px / 4 = 50px*/
+
+        .item{
+            box-sizing: border-box;
+            border: 1px solid black;
+            width: 100px; height: 100px;
+        }
+
+        .item01{
+            background-color: aqua;
+            flex-grow: 1;
+        }
+        
+        .item02{
+            background-color: pink;
+            flex-grow: 1;
+        }
+
+        .item03{
+            background-color: skyblue;
+            flex-grow: 0;
+        }
+
+        .item04{
+            background-color: blueviolet;
+           /* flex-grow: 2; */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item item01">01</div>
+        <div class="item item02">02</div>
+        <div class="item item03">03</div>
+        <div class="item item04">04</div>
+    </div>
+</body>
+</html>

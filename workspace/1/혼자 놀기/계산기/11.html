@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input id='name' onkeyup='printName()' type="number"/>
+        <button type="button" value="입력" ></button>
+    </form>    
+    <input id='name2' onkeyup='printName()' type="number"/>
+    <div id='result'>1111</div>
+<script>
+    
+    function printName(){    
+        document.addEventListener('click')    
+        let name = document.getElementById('name').value;
+        let name2 = document.getElementById('name2').value;
+
+        name=parseInt(name);
+        name2=parseInt(name2);
+        
+        let kkk = name+name2;
+        //console.log(kkk);
+        if(kkk==NaN){
+            document.getElementById("result").innerText = 1111;
+        }
+        document.getElementById("result").innerText = kkk;
+
+
+    }
+    
+        
+</script>
+</body>
+</html>

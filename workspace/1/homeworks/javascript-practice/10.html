@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별 4</title>
+    <script>
+       /*
+            input : 5 - 최대 별의 개수가 그려질 라인 번호
+            max - 한행에 출력되는 최대 별의 개수
+       */
+
+    let input = prompt("숫자를 입력해 주세요.")
+    document.write(input+"<hr/>")
+
+    for(let i = 1; i <= input; i++){
+        for(let j = input; j > i; j--){
+                document.write("[ ]");
+            } // 공백 출력
+        for(let j = 1; j <= i * 2 - 1; j++){
+            document.write("[*]")
+        } // 별 출력         
+        document.write("<br/>");
+        }
+        //-----------------------------
+        //역삼각형
+        for(let i = input-1; i > 0; i--){
+            for(let j = input - i; j > 0; j--){
+                document.write("[ ]");
+            }
+            for(let j = 0; j < i*2-1 ; j ++){
+                document.write("[*]")
+            }
+            document.write("<br/>");
+        }
+        document.write("<br/><br/><br/><br/><br/>")
+
+        let max = input * 2 - 1;
+        document.write("2<hr/>");
+
+        //count를  활용하여 출력할 별의 갯수 계산
+        for(let i = 1, count = 0; i <= max; i++){
+            if(i<= input){
+                //별의 갯수 증가
+                ++count;
+            }else{
+                // 별의 갯수 감소
+                --count;
+            }
+            for(let j = 1; j <= input - count; j++){
+                document.write("&nbsp")
+            }
+            
+            for(let j = 1; j <= count * 2- 1; j++){
+                document.write("*");
+            }
+            document.write("<br/>");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

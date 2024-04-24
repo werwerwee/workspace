@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let = gender = prompt("성별을 입력하세요(남성또는 남 그리고 여성또는 여)")
+        let message = "화장실을 찾을 수 없습니다";
+        switch(gender){
+            case '남성':            
+            case '남' :
+                message = "남자 화장실은 왼쪽입니다" ;
+                break;
+            case '여성' :
+             case '여' :
+                 message = "여자 화장실은 오른쪽입니다" ;
+                break;
+        }
+
+        document.write("<h1>"+message)
+    </script>
+</body>
+</html>

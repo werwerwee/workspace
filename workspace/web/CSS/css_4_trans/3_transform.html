@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{border: 1px solid black; width: 100px; height: 100px; transition: width 1s, height 2s, transform 3s linear;}
+        input[type=checkbox]:checked + .box{width: 200px; height: 200px; transform: skew(720deg , 720deg);}
+    </style>
+</head>
+<body>
+    <input type="checkbox"> 체크!
+    <div class="box">hello</div>
+    <br>
+    <div class="box">hello</div>
+</body>
+</html>

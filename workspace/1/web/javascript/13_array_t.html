@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        let score1 = prompt("1점수를 입력하세요")
+        let score2 = prompt("2점수를 입력하세요")
+        let score3 = prompt("3점수를 입력하세요")
+        let score4 = prompt("4점수를 입력하세요")
+        
+        let max, min;
+        max = min = score1;
+        // max 와 min을 첫번째 함수로 초기화
+
+
+        // 최댓값 찾기
+        if(score2 > max){
+            max = score2;
+        }
+
+        if(score3 > max){
+            max = score3;
+        }
+
+        if(score4 > max){
+            max = score4;
+        }
+
+        // 최솟값 찾기
+        if(score2<min){
+            min = score2;
+        }
+
+        if(score3<min){
+            min = score3;
+        }
+
+        if(score4<min){
+            min = score4;
+        }
+
+        document.write("최솟값 : " + min+"<br/>")
+        document.write("최댓값 : " + max+"<br/>")
+
+
+        // 배열을 이용한 학생 점수 처리
+            
+        let scores = []; // 빈 배열 생성
+        
+        // 점수 입력 받기
+        for(let i = 0; i < 4; i++){
+            let score = prompt((i+1)+"번째 점수를 입력하세요");
+            scores.push(score);
+        }
+        console.log(scores);
+
+        max = min = scores[0];
+        
+
+        // 최대값 최솟값
+        for(let i =0; i < scores.length; i++){
+            if(scores[i]> max){
+                max=scores[i];
+            }
+
+            if(scores[i] < min){
+                max=scores[i];
+            }
+        }
+        document.write("최솟값 : " + min + "<br/>")
+        document.write("최댓값 : " + max + "<br/>")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

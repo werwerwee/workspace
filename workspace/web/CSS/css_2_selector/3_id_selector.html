@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성 전택자(#)</title>
+    <style>
+        /* id 속성에 부여된 값이 header인 태그 요소 */
+        #header{width: 800px; background-color: yellow;}
+
+        #wrap{width: 800px;}
+
+        /* border 외곽선 선굵기 선스타일 선색상 */
+        div{border: 1px solid black;}
+
+        #aside{width: 30%; background-color: blue;}
+
+        #content{width: 70%; background-color: red;}
+        
+        /* ID가 ASIDE인 DIV태그 선택 */
+        div[id=aside]{background-color: skyblue;}
+
+         
+    </style>
+</head>
+<body>
+        <div id="header">
+        <h1>#header tag</h1>
+        </div>
+    </div>
+    <div id="wrap">
+        <div id="aside">
+            <h1>#aside tag</h1>
+            <!-- id 속성에 부여될 수 있는 값은 유일하다. -->
+        </div>
+            <div id="content aside">
+                <h1>#content tag</h1>
+            </div>
+
+            <div id="content">
+                <h1>#content tag</h1>
+            </div>
+</body>
+</html>

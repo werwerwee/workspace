@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+    <table border="1">
+        <tr>
+            <th colspan="2">회원가입</th>
+        </tr>
+        <tr>
+            <td>이메일</td>
+            <td> <input type="text" placeholder="e-mail" size="5" name="email">
+                
+                <input list="mail" type="text" placeholder="@@@.com" size="9">
+                <datalist id="mail">
+                    <option>@gmail.com</option>
+                    <option>@naver.com</option>
+                    <option>@nate.com</option>
+                    <option>@daum.com</option>
+                    <option>@icloud.com</option></td>
+                
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td><input type="text" placeholder="name"></td>
+        </tr>
+        <tr>
+            <td>비밀번호</td>
+            <td><input type="password" placeholder="password"></td>
+        </tr>
+        <tr>
+            <td>비밀번호 확인</td>
+            <td><input type="password" placeholder="password"></td>
+        </tr>
+        <tr>
+            <td>성별</td>
+            <td>
+                <input type="radio" name="성별">남성
+                <input type="radio" name="성별">여성
+            </td>
+        </tr>
+        <tr>
+            <td>나이</td>
+            <td>
+                <input type="number" placeholder="숫자를 입력하세요">
+            </td>
+        </tr>
+        <tfoot>
+            <th colspan="2"><input type="submit">
+        </tfoot>
+
+    </table>
+</form>
+</body>
+</html>

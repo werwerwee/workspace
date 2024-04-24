@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while if</title>
+</head>
+<body>
+    <script>
+        let guess = 78; // 임의로 지정된 숫자
+
+        let isRun = true // while 반복문 탈출 flag
+
+        let count = 0; //추측횟수를 저장할 변수
+
+        let msg = "" //결과 메세지를 저장할 변수
+
+        while(isRun){
+            let input = prompt("1~100까지의 정수를 입력해주세요.");
+
+            count++
+
+            if(input == null || input =="" || isNaN(input)){
+                alert("숫자를 입력해주세요")
+                count--
+                continue;
+            }
+
+            if(input == guess){
+                msg = "성공입니다.";
+                isRun = false
+            }else if(input<guess){
+                msg = "너무 낮습니다";
+            }else{
+                msg = "너무 높습니다"
+            }
+            alert(msg+" - 추측횟수 : " + count);
+        }
+    </script>
+</body>
+</html>

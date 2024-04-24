@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*  전채선택자 - 모든 태그요소 */
+        *{color: blue;}
+        /* class 속성에 부여된 값으로 태그요소 선택 */
+        .select{color: black; background-color: red ;width:50px;}
+        /* 부모가 가진 글자 크기에서 x1.5의 크기로 출력 */
+        .size{font-size: 1.5em;}
+        li{color: greenyellow;}
+    </style>
+</head>
+<body>
+    <!-- ul>li*4 -->
+    <ul>
+        <li>사과</li>
+        <li class="size">바나나</li>
+        <li class="select">오랜지</li>
+        <li class="size select">밀감</li>
+    </ul>
+
+</body>
+</html>

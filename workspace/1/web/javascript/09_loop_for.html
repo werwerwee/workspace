@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOR</title>
+</head>
+<body>
+    <script>
+        /*
+        반복문: 프로그램 내에서 연속된 동일한 명령을 일정횟수 만큼 반복하여 수행하도록 제어하는 명령문.
+            종류
+            for문 (반복횟수가 정해져 있는 경우)
+            while, do while (반복횟수가 정해져 있지 않은 경우)
+
+
+            for문 표현식
+            for(초기화식; 조건식; 증감식){
+                반복수행되는 작업(수행문, 조건문)
+            }
+
+            1. 초기화식 ex) let i = 0; - 최초에 한번만 수행
+            2. 초기화된 값을 비교하여 조건식의 결과가 참이면 블럭{} 내부의 수행문을 실행
+            ex) i < 10;
+            3. 증감식 ; for문 초기화식에 선언된 변수의 값의 증가또는 감소를 연산하여 조건식에 활용
+            ex) i += 2; i++; i--; i=i+3; 등등
+            4. 2~3 반복수행
+            5. 조건식을 비교하였을 때 조건식의 결과가 거짓(false)이면 반복문 종료
+
+        */
+
+
+        //for(var i = 1; i < 10; i++){
+        for(var i = 1; i < 10; i += 1){
+            document.write(i+" ");
+        }
+
+        document.write(i);
+
+        for(let j = 1; j<= 6; j++){
+            document.write(j+" ")
+        }
+            // {} 내부에 선언된 j 는 {} 내부에서만 사용가능 {}가 종료되면 삭제
+
+        /*
+        
+        quiz 1
+        1에서부터 100까지의 정수의 총 합을 구하여 반복문 종료후 출력하세요
+        */
+        var a = 0;
+        for(let i =1; i <= 100; i++){
+            a = a + i;
+        } document.write(a);
+
+        var sum =0;
+        for(let i = 100; i > 0; i--){
+            sum+=i;
+        }document.write(sum);
+
+
+
+        /*
+        quiz2
+        사용자에게 정수 2개를 입력받아 첫번째 정수에서부터 2번째 정수까지 증가하는 값의 총합을 구하시오
+        */
+       document.write("<hr/>")
+
+        var a = prompt("첫번째 정수");
+        var b = prompt("두번째 정수");
+        var c = 0;
+        var d = 0;
+
+        a=parseInt(a);
+        b=parseInt(b);
+
+        for(let i =1; i <= a; i++){
+            c = c + i;}
+        for(let i =1; i <= b; i++){
+            d = d + i;}
+            
+        if(d-c > 0){
+            document.write(d-c+a)
+        }else{document.write(c-d+b)}
+
+        
+        let answer = 0;
+        for(let i =a; i<= b; i++){
+            answer = answer+i;
+        } document.write("<hr/>"+answer)
+
+        /*
+        3. 1~100까지의 정수중 3의 배수의 합을 구하시오
+        */
+
+        document.write("<hr/>")
+
+        var a = 0;
+        for(let i = 0 ; i <= 100; i = i+3){
+            a = a + i;
+        } document.write(a);
+
+        document.write("<hr/>")
+
+
+        var total = 0;
+        for(let i = 1; i <= 100; i++){
+            sum = sum + i;
+            if(i % 3 == 0){
+                total = total + i
+            }
+        } document.write(total)
+
+        var total = 0;
+        for(let i = 1; i <= 100; i++){
+            if(i % 3 != 0){
+                //3의 배수가 아닐때 실행
+                continue;
+            }
+            total = total + i;
+        }document.write("<hr/>")
+        document.write(total)
+
+        /*
+        continue 반복문 내부의 실행흐름을 제어하는 예약어
+        continue; 를 만나면 반복문 블럭내부의 아래 실행문은 수행하지 않고 즉시 반복문의 증감식으로 이동한다
+        */
+
+
+        total=0;
+        for(let i = 1; i<=1000; i++){
+            if(i % 3 == 0){
+                total+= i;
+            }console.log(i);
+            if(i>100){
+                break;
+            }
+        }
+        //break문 실행시 해당반복문을 강제로 종료
+        // 특정 조건에서 작업이 완료되고 그 이후에 반복을 실행하지 않아도 되는 경우 사용
+
+         // 이중 for 문
+       for(let i = 1; i <= 5; i++){
+            for(let j = 1; j <=5; j++){
+                document.write(j + " ");
+            } // 내부 for문
+            document.write("<br/>");
+       } // 외부 for문
+
+
+       for(let i = 2; i <=9; i++){
+        for(let j =1; j <=9; j++){
+            document.write(`${i} * ${j} = ${i*j}`)
+        }
+        document.write("<br/>")
+       }        
+    </script>
+</body>
+</html>
